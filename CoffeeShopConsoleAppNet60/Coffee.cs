@@ -9,12 +9,31 @@ namespace CoffeeShopConsoleAppNet60
     internal abstract class Coffee
     {
 
+        private int _discount;
+
+        public int Discount
+        {
+            get { return _discount; }
+            set { _discount = value; }
+        }
+
         public virtual int Price()
         {
             return 20;
         }
 
-        public abstract string Strength();  
+        public abstract string Strength();
+
+
+        protected Coffee(int discount)
+        {
+            Discount = discount;
+        }
+
+
+
+
+
         //private int _price;
         //private string _strength;
         //private int _discount;
