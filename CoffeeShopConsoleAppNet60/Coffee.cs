@@ -19,45 +19,23 @@ namespace CoffeeShopConsoleAppNet60
 
         public virtual int Price()
         {
-            return 20;
+            if(Discount < 5)
+            {
+                return 20 - Discount;
+            }
+            else
+            {
+                throw new ArgumentException("Discount is too big");
+            }
         }
 
         public abstract string Strength();
 
 
-        protected Coffee(int discount)
+        public Coffee(int discount)
         {
             Discount = discount;
         }
 
-
-
-
-
-        //private int _price;
-        //private string _strength;
-        //private int _discount;
-
-        //public int Price
-        //{
-        //    get { return _price; }
-        //    set { _price = value; }
-        //}
-        //public string Strength
-        //{
-        //    get { return _strength; }
-        //    set { _strength = value; }
-        //}
-        //public int Discount
-        //{
-        //    get { return _discount; }
-        //    set { _discount = value; }
-        //}
-
-
-        //public int CoffeePrice()
-        //{
-        //    return _price;
-        //}
     }
 }

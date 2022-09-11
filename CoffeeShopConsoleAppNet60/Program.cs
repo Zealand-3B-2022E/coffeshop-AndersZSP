@@ -4,9 +4,12 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Cortado cortado = new Cortado();
-        Latte latte = new Latte();
-        BlackCoffee blackCoffee = new BlackCoffee();
+        Console.WriteLine("How high a discount?");
+        string strDiscount = Console.ReadLine();
+        int discount = Int32.Parse(strDiscount);
+        Cortado cortado = new Cortado(discount);
+        Latte latte = new Latte(discount);
+        BlackCoffee blackCoffee = new BlackCoffee(discount);
 
         List<Coffee> coffeeList = new List<Coffee>();
         coffeeList.Add(blackCoffee);
@@ -18,5 +21,12 @@ internal class Program
             Console.WriteLine(coffee.Strength());
             Console.WriteLine(coffee.Price());
         }
+
+        Console.WriteLine("ASSIGNMENT 8");
+        //Assignment 8 milk only. CAN'T GET IT TO WORK
+
+
+
+        
     }
 }

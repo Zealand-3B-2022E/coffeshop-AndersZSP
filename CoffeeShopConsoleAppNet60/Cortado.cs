@@ -10,6 +10,7 @@ namespace CoffeeShopConsoleAppNet60
     {
         public Cortado(int discount) : base(discount)
         {
+            Discount = discount;
         }
 
         public int mlMilk()
@@ -19,7 +20,7 @@ namespace CoffeeShopConsoleAppNet60
 
         public override int Price()
         {
-            return 25;
+            return 25 - Discount;
         }
         public override string Strength()
         {
