@@ -10,7 +10,7 @@ namespace CoffeeShopConsoleAppNet60
     {
         public Latte(int discount) : base(discount)
         {
-            Discount = discount;
+            //Discount = discount;
         }
 
         public int mlMilk()

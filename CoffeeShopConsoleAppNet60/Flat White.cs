@@ -8,6 +8,7 @@ namespace CoffeeShopConsoleAppNet60
 {
     internal class FlatWhite : Coffee
     {
+        
         public FlatWhite(int discount) : base(discount)
         {
             Discount = discount;

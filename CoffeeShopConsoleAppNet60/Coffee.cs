@@ -11,6 +11,7 @@ namespace CoffeeShopConsoleAppNet60
 
         private int _discount;
 
+
         public int Discount
         {
             get { return _discount; }
@@ -19,7 +20,7 @@ namespace CoffeeShopConsoleAppNet60
 
         public virtual int Price()
         {
-            if(Discount < 5)
+            if(Discount < 6)
             {
                 return 20 - Discount;
             }
@@ -31,10 +32,16 @@ namespace CoffeeShopConsoleAppNet60
 
         public abstract string Strength();
 
+        //public abstract string BlendType();
 
         public Coffee(int discount)
         {
             Discount = discount;
+        }
+
+        public override string ToString()
+        {
+            return $"pris = {Price()}DKK,\nStyrke = {Strength()}";
         }
 
     }

@@ -22,8 +22,6 @@ internal class Program
             Console.WriteLine(coffee.Price());
         }
 
-        Console.WriteLine("ASSIGNMENT 8");
-        //Assignment 8 milk only. CAN'T GET IT TO WORK
 
 
 
